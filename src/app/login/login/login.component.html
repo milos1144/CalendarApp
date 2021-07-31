@@ -1,0 +1,9 @@
+<div class="container">
+    <img src="../../../assets/logo.png" alt="" class="logo">
+    <form class="login-form">
+        <input type="text" placeholder="Korisničko ime" name="username" [(ngModel)]="this.username" autocomplete="off">
+        <input type="password" placeholder="Lozinka" name="password" [(ngModel)]="this.password">
+        <p class="error">{{this.errorMessage}}</p>
+        <button type="submit" (click)="login()">Login</button>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="calendar">
+      <div class="month">
+        <button (click)="logout()" class="button logout">Logout</button>
+        <i class="fas fa-angle-left prev"></i>
+        <div class="date">
+          <h1 class="currentMonth">{{this.months[this.date.getMonth()]}} {{this.date.getFullYear()}}</h1>
+          <div class="buttons">
+            <button class="button" (click)="this.prevNextMonth(0)">&#60;</button>
+            <p class="currentDay">{{this.currentDate.toDateString() | date: 'dd. MM. YYYY'}}</p>
+            <button class="button" (click)="this.prevNextMonth(1)">></button>
+          </div>
+        </div>
+        <i class="fas fa-angle-right next"></i>
+      </div>
+      <div class="weekdays">
+        <div>Ponedeljak</div>
+        <div>Utorak</div>
+        <div>Srijeda</div>
+        <div>Četvrtak</div>
+        <div>Petak</div>
+        <div>Subota</div>
+        <div>Nedelja</div>
+      </div>
+      <div class="days">
+          <div class="day prev-days" *ngFor="let prevDay of this.prevDays"></div>
+          <div  class="day active-day" *ngFor="let day of this.days" (click)="toAddEvent(day.dateString)" [ngClass]="this.markCurrentDay === day.dateString ? 'markCurrentDay': ''" [attr.data-date]="day.dateString" >
+            {{day.dateString.slice(0,2)}}
+        </div>
+      </div>
+    </div>
+  </div>
+

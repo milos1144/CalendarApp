@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    padding: env(safe-area-inset);
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+button, input, textarea {
+    outline: 0;
+    border: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+@media(max-width: 992px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+  
+@media(max-width: 576px) {
+  :root {
+    font-size: 10px;
+  }
+  
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,116 @@
+<div class="container">
+        <div class="select">
+            <div class="date">
+                <button (click)="this.dayPrevNext(0)">&#60;</button>
+                <h1>{{this.currentDateString}}</h1>
+                <button (click)="this.dayPrevNext(1)">></button>
+            </div>
+          <div class="select-container">
+              <div *ngIf="!this.barberSelect" class="placeholder">Izaberite frizera</div>
+            <select name="barberSelect"  [(ngModel)]="this.barberSelect"  (change)="this.navigateToBarber(this.barberSelect, this.currentDateString)">
+                <option value="darko">Darko Kantar</option>
+                <option value="milan">Milan Grbic</option>
+                <option value="milos">Milos Grbic</option>
+            </select>
+          </div>
+        </div>
+        <div class="times" *ngIf="this.barberSelect">
+            <div class="reservation">
+                <button value="1" [routerLink]="['1']">08:00-08:30</button>
+                <p id="1"></p>
+            </div>
+            <div class="reservation">
+                <button value="2" [routerLink]="['2']">08:30-09:00</button>
+                <p id="2"></p>
+            </div>
+            <div class="reservation">
+                <button value="3" [routerLink]="['3']">09:00-09:30</button>
+                <p id="3"></p>
+            </div>
+            <div class="reservation">
+                <button value="4" [routerLink]="['4']">09:30-10:00</button>
+                <p id="4"></p>
+            </div>
+            <div class="reservation">
+                <button value="5" [routerLink]="['5']">10:00-10:30</button>
+                <p id="5"></p>
+            </div>
+            <div class="reservation">
+                <button value="6" [routerLink]="['6']">10:30-11:00</button>
+                <p id="6"></p>
+            </div>
+            <div class="reservation">
+                <button value="7" [routerLink]="['7']">11:00-11:30</button>
+                <p id="7"></p>
+            </div>
+            <div class="reservation">
+                <button value="8" [routerLink]="['8']">11:30-12:00</button>
+                <p id="8"></p>
+            </div>
+            <div class="reservation">
+                <button value="9" [routerLink]="['9']">12:00-12:30</button>
+                <p id="9"></p>
+            </div>
+            <div class="reservation">
+                <button value="10" [routerLink]="['10']">12:30-13:00</button>
+                <p id="10"></p>
+            </div>
+            <div class="reservation">
+                <button value="11" [routerLink]="['11']">13:00-13:30</button>
+                <p id="11"></p>
+            </div>
+            <div class="reservation">
+                <button value="12" [routerLink]="['12']">13:30-14:00</button>
+                <p id="12"></p>
+            </div>
+            <div class="reservation">
+                <button value="13" [routerLink]="['13']">14:00-14:30</button>
+                <p id="13"></p>
+            </div>
+            <div class="reservation">
+                <button value="14" [routerLink]="['14']">14:30-15:00</button>
+                <p id="14"></p>
+            </div>
+            <div class="reservation">
+                <button value="15" [routerLink]="['15']">15:00-15:30</button>
+                <p id="15"></p>
+            </div>
+            <div class="reservation">
+                <button value="16" [routerLink]="['16']">15:30-16:00</button>
+                <p id="16"></p>
+            </div>
+            <div class="reservation">
+                <button value="17" [routerLink]="['17']">16:00-16:30</button>
+                <p id="17"></p>
+            </div>
+            <div class="reservation">
+                <button value="18" [routerLink]="['18']">16:30-17:00</button>
+                <p id="18"></p>
+            </div>
+            <div class="reservation">
+                <button value="19" [routerLink]="['19']">17:00-17:30</button>
+                <p id="19"></p>
+            </div>
+            <div class="reservation">
+                <button value="20" [routerLink]="['20']">17:30-18:00</button>
+                <p id="20"></p>
+            </div>
+           <div class="reservation">
+                <button value="21" [routerLink]="['21']">18:00-18:30</button>
+                <p id="21"></p>
+           </div>
+           <div class="reservation">
+                <button value="22" [routerLink]="['22']">18:30-19:00</button>
+                <p id="22"></p>
+           </div>
+            <div class="reservation">
+                <button value="23" [routerLink]="['23']">19:00-19:30</button>
+                <p id="23"></p>
+            </div>
+            <div class="reservation">
+                <button value="24" [routerLink]="['24']">19:30-20:00</button>
+                <p id="24"></p>
+            </div>
+        </div>
+        <a class="back" (click)="goToCalendar()">Nazad</a>
+</div>

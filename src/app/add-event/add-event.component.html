@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="details">
+        <h3>Frizer: <span>{{this.barber | titlecase}}</span></h3>
+        <h3>Datum: <span>{{this.dateId}}</span></h3>
+        <h3>Vrijeme: <span>{{this.time}}</span></h3>
+    </div>
+    
+    <div class="form">
+
+        <input type="text" placeholder="Ime i prezime" class="eventName" name="eventName" [(ngModel)]="this.reservation.customer" autocomplete="off">
+        <textarea maxlength="255" name="eventText" placeholder="Opis" class="eventText" [(ngModel)]="this.reservation.note"></textarea>
+
+        <div class="buttons">
+            <button class="back" (click)="this.goBack()">Nazad</button>
+            <button class="delete" *ngIf="this.reservation.id" (click)="this.deleteAppointment()">Obriši</button>
+            <button class="save" type="button" (click)="editReservation()">Sačuvaj</button>
+        </div>
+
+    </div>
+  
+  
+    
+</div>

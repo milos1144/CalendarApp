@@ -1,0 +1,159 @@
+.container {
+    min-height: 100vh;
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.select {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.select h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 70%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+.select select {
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+
+.select select:focus-visible {
+    outline: none;
+} 
+
+.date {
+    display: flex;
+    justify-content: center;
+}
+
+.date button {
+    width: 170px;
+    font-size: 2rem;
+    transition: .3s ease;
+    background-color: white;
+}
+
+.date button:hover {
+    background-color: rgb(58, 180, 47);
+    color: white;
+}
+
+
+
+.times {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.reservation {
+    display: grid;
+    grid-template-columns: .6fr 1.5fr;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    border-radius: 5px;
+    font-size: .9rem;
+    margin: 5px 15px;
+}
+
+.reservation button {
+    width: 100%;
+    min-height: 45px;
+    font-size: 1rem;
+    background-color: rgb(58, 180, 47);
+    color: white;
+    border-radius: 5px;
+    transition: .4s ease-out;
+    height: 100%;
+}
+
+.reservation button:not(.reserved) {
+     /* "to left" / "to right" - affects initial color */
+     background: linear-gradient(to left, rgb(58, 180, 47) 50%, rgb(255, 60, 0) 50%) right;
+     background-size: 200%;
+     transition: .4s ease-out;
+}
+
+.reservation button:not(.reserved):hover {
+    background-position: left;
+}
+
+p {
+    color: white;
+    text-align: left;
+    padding: 0 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.back {
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 8px 35px;
+    border-radius: 5px;
+    text-align: center;
+    transition: .3s ease;
+    background-color:white;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.reserved {
+    background: linear-gradient(to left, rgb(58, 180, 47) 50%, rgb(255, 60, 0) 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+    background-position: left;
+}
+
+.select-container {
+    position: relative;
+   margin: 0 auto;
+    width: 100%;
+}
+
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -35%);
+  pointer-events: none;
+  font-size: 1.2rem;
+}
+
+
+
+@media(max-width: 556px) {
+    .container {
+       padding: 20px 0 0 0;
+    }
+    .reservation {
+        grid-template-columns: .9fr 1.5fr;
+        margin: 5px ;
+    }
+}
+
+@keyframes fromLeft {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}
